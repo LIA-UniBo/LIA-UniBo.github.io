@@ -1,0 +1,372 @@
+[
+    {
+        "Subject":"Iterative schemes for Empirical Model Learning",
+        "Project":false,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Algorithm Configuration", "Epidemic Control"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"In principle the Empirical Model Learning approach can strongly benefit from the used of iterative schemes,where solutions are produced, evaluated, and then used to refine the surrogate model. Compare to standard black-box optimization, using EML would naturally provide support for constraints. However, this kind of approach requires to solve multiple challanges that are suited for several theses and projects, e.g.: making sure that the models used in EML (chiefly NNs and DTs) received significant updates from each solution, handling exploration\/exploitation trade-offs, evaluating confidence intervals... ",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"Robust Neural Networks (advanced)",
+        "Project":false,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Tests", "Simulated HW"],
+        "Techniques":["ML"],
+        "Description":"Assess robustness of neural networks w.r.t. hardware fault injection. Devise ad-hoc mechanisms at training time to deal with the most frequent types of faults. This projects is in cooperation with researchers from University of Coimbra",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Improve DT encoding in EMLlib",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Algorithm Configuration", "Epidemic Control"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Implement state-of-the-art encodings for Decision Trees in Empirical Modlels learning, and craft an example problem",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"Add support for RF encodings in EMLlib",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Algorithm Configuration", "Epidemic Control"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Implement state-of-the-art encodings for Random Forests in Empirical Modlels learning, and craft an example problem",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"Deep clustering",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["HPC"],
+        "Techniques":["ML"],
+        "Description":"Read about deep clustering techniques, and investigate their use for detecting operating modes in industrial data (primarily HPC, with a chance of using gearbox data if an NdA is signed) ",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"Compressed networks in EML",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Algorithm Configuration", "Epidemic Control"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Compressed, distilled, sparsified or binary NNs should be much more scalable when used in the context of EML. The project would consists of investigating whether this is true and the degree of advantage that can be obtained",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"EML for chance constraints",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Power Flow Planning", "Energy Management"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Using a NN to learn a probabilistic predicate, which could then serve as a more scalable form of chance constraint in optimization. This project may involve an international cooperation with the University of Edinburgh",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Better neural network encodings",
+        "Project":false,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Algorithm Configuration", "Epidemic Control"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Rely on techniques such as abstract interpretation or column generation to obtain more scalable bounds for Neural Network encodings, to be used either for Empirical Model Learning or for verification tasks",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Constraints at training time in Random Forests",
+        "Project":false,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Fair ML", "Classifiers", "Physics-informed ML"],
+        "Techniques":["ML"],
+        "Description":"Check constraint satisfaction at training time before accepting a split when learning Decision Trees (fairness constraints would make an excellet first candidate). In ensembles, allow for randomly bounded violation and use the central limit theorem to improve flexibility and still achieve probabilistic guarantees",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Improve usage of unsupervised data for the definition of RUL-based maintenance policies",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Gearboxes", "NdA", "Ball Bearing"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Building over the SBR-based approach for taking into account unsupervised data in maintenance policy and introduce improvements to otbain more robust and higher-quality result. This research line may result in a publication",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"Control based rebalancing",
+        "Project":true,
+        "Thesis":true,
+        "Internship":true,
+        "Applications-Datasets":["Wind Turbines"],
+        "Techniques":["ML"],
+        "Description":"Attempt data rebalancing techniques based on the use of density estimation over controlled parameter. This activity will consider multiple datasets ",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Convolutional Networks in EMLlib",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Algorithm Configuration", "Epidemic Control"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Add support for CNNs in the EMLlib",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Feature selection with correlated data",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Medical Data", "Down Syndrome", "Liver Transplants"],
+        "Techniques":["ML"],
+        "Description":"Follow-up on a previous project, where the Boruta attribute selection system was modified to take into account clusters of correlated (or semantically similar) attributes. The project will involved controlled experiments to check the reliability of the current algorithm, and making modifications or improvements depending on the result of this evaluation.",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Causal network discovery",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Medical Data", "Down Syndrome", "Liver Transplants", "HPC"],
+        "Techniques":["ML"],
+        "Description":"Investigate algorithms for discovering causal relations and test them in controlled experiments designed by relying on a generator, built as part of another project. Applications on real data include searching for causal factor in medical data about patients with Down syndrome",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"AI applications in astro-physics",
+        "Project":true,
+        "Thesis":true,
+        "Internship":true,
+        "Applications-Datasets":["Astro-physics"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Multiple projects involving astro-physical data, in collaboration with the National Astro Physics Institute (Istituto Nazionale di Astro Fisica -- INAF). Specific topics needs to be agreed by discussing with the teacher and with INAF researchers",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"ML applications for Liver Transplantations",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Liver Transplants"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Define methods to handle decision-focused bias in datasets. The considered applications involved a liver transplanation dataset, where patients are selected for a transplant depending on their conditions, but also on the compatibility with randomly arriving donors.",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Internship\/thesis opportunities at MindIT SrL",
+        "Project":false,
+        "Thesis":true,
+        "Internship":true,
+        "Applications-Datasets":["Sales", "Promo Fund Allocation"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Topics: integration of ML and optimization for applications in sales analysis, prediction, and promo fund optimization",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Internship\/thesis opportunities at Electrolux",
+        "Project":false,
+        "Thesis":true,
+        "Internship":true,
+        "Applications-Datasets":["Robots", "Tests", "Domestic Appliances"],
+        "Techniques":["Optimization"],
+        "Description":"Application of optimization methods (and possibly some ML integration) for the construction of testing plans for domestic appliances, to be performed by robots",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Internship\/thesis opportunities at Addfor",
+        "Project":false,
+        "Thesis":true,
+        "Internship":true,
+        "Applications-Datasets":["Engineering", "Automotive"],
+        "Techniques":["ML"],
+        "Description":"ML applications in the engineering domains, with a focus in the automotive field",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Internship\/thesis opportunities at NAIS Engineering",
+        "Project":false,
+        "Thesis":true,
+        "Internship":true,
+        "Applications-Datasets":["Engineering", "Automotive", "CFD"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Applications of ML\/dynamic system integration in engineering topics, with an emphasis on Computational Fluid Dynamics",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Internship\/thesis opportunities at Prometeia",
+        "Project":false,
+        "Thesis":true,
+        "Internship":true,
+        "Applications-Datasets":["Credit"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Applications of ML and optimization in the credit sector",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Internship\/thesis opportunities at Injenia",
+        "Project":false,
+        "Thesis":true,
+        "Internship":true,
+        "Applications-Datasets":["Multiple Domains"],
+        "Techniques":["ML"],
+        "Description":"Applications of ML in multiple domains",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Implementation of Anomaly Detection methods on the Huawei Atlas200DK inference platform",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Standard Datasets"],
+        "Techniques":["ML"],
+        "Description":"nan",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"Implementation of Density Estimation methods on the Huawei Atlas200DK inference platform",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Standard Datasets"],
+        "Techniques":["ML"],
+        "Description":"nan",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"Implementation of Neuro-Probabilistic models on te Huawei Atlas200DK inference platform",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Standard Datasets"],
+        "Techniques":["ML"],
+        "Description":"nan",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"Thesis opportunities in the health domain",
+        "Project":false,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Health"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Opportunities for thesis topics in cooperation with a research group from DEI and the quantitative method units of the Bologna ASL",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Energy models for interpretable ML applications",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Protein Folding"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Develop training methods for energy models (a.k.a. unscaled density estimation) with applications on interpretable ML. Activity in cooperation with prof. Carlo Lucibello from Bocconi University",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Integration of ML and optimziation for simplified urban planning problems",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "TSP"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Combine optimization with ML models to plan road adjustments and improve delivery time in controlled scenarios. Activity in cooperation with prof. Carlo Lucibello from Bocconi University",
+        "Responsible":["Michele"]
+    }, {
+        "Subject":"Multi-component anomaly detection",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Oil", "NdA", "HPC"],
+        "Techniques":["ML"],
+        "Description":"Experiment with a multi-component approach for diagnostic applications based on using multiple ML models and Bayesian networks",
+        "Responsible":["Michele", "Andrea"]
+    }, {
+        "Subject":"Apply CNNs to solve the Partial Latin Square Completion problem",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "PLS"],
+        "Techniques":["ML", "Constraint Programming"],
+        "Description":"Improve the current method in which a feedforward fully-connected NN is trained to solve the PLS completion problem. The training is performed in a supervised fashion: given a partial solution as input, the NN is trained to extend it by making a single global feasible assignment. Since the PLS has a grid-like structure, Convolutional architecture can easily exploit this kind of structure. The aim of the project is to experiment with CNNs to check whether they can outperform feedforward fully-connected NN in term of feasibility ratio or convergence rate. In addition (or as a follow-up), the candidate can evaluate the capability of the model to generalize to different problem dimensions using a masking input representation or with fine-tuning of the model trained on a single problem dimension.",
+        "Responsible":["Mattia"]
+    }, {
+        "Subject":"Parser for PyTorch models in EMLlib",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Extend the Empirical Model Learning Library with a parser for PyTorch models. This would allow for a wider use of the EML approach and expand the users' community",
+        "Responsible":["Federico"]
+    }, {
+        "Subject":"Deep Learning for Probability Density Estimation",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic"],
+        "Techniques":["ML"],
+        "Description":"The goal is to develop an unsupervised learning methology for probability density estimation, namely approximating the density function undelining a set of data. The project requires to define a custom deep lerning model and a computational approach to approximate the area under a curve.",
+        "Responsible":["Federico"]
+    }, {
+        "Subject":"Sthocastic UDE - Probabilistic Parametrization",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Epidemic Control", "Standard Datasets"],
+        "Techniques":["ML"],
+        "Description":"Approximate the parametrization of dynamic system with a deep neural network. Introduces sthocasticity on the parametrization. This allows to approximate complex phenomenon such as epidemics and industrial processes. The students working on this project are going to participate actively in a research project on COVID-19 and the development a predictive and prescriptive models for pandemic scenarios.  ",
+        "Responsible":["Federico", "Mattia"]
+    }, {
+        "Subject":"Anomaly Detection with Deep Learning for PDE",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Standard Datasets"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"The goal is to integrate a deep neural network into an optmization model through Empirical Model Learning. The DNN is tasked with learning the PDF of a dataset in an unsupervised fashion. The optmization problem is tasked with identify anomalous scenarios using the DNN.  ",
+        "Responsible":["Federico"]
+    }, {
+        "Subject":"Sthocastic UDE - Probabilistic Input",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic", "Standard Datasets"],
+        "Techniques":["ML"],
+        "Description":"Approximate the parametrization of dynamic system with a deep neural network. Introduces sthocasticity on the parametrization. This allows to approximate complex phenomenon such as epidemics and industrial processes. The students working on this project are going to participate actively in a research project on COVID-19 and the development a predictive and prescriptive models for pandemic scenarios.",
+        "Responsible":["Federico", "Mattia"]
+    }, {
+        "Subject":"Constrained Deep Reinforcement Learning",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["Virtual Power Plant", "Energy Management", "Standard Datasets"],
+        "Techniques":["DRL", "Combinatorial Optimization"],
+        "Description":"A Virtual Power Plant aggregates many Distributed Energy Resources  in a single operating profile. DER combines both reliable (deterministic) power systems with uncontrollable (stochastic) Renewable Energy Sources (RES). An Energy Management System generally allocates the power flows from the different sources minimizing the cost and satisfying the user demand. To be efficient at run-time, a simply greedy heuristic is generally used in this application scenario to find online the optimal operational decisions. Since both the RES and the user demand are stochastic, hybrid offline\/online methods have shown to be effective in this scenario. By exploting the offline information (e.g. probability distribution, or historical data), an offline parameter tuning phase can applied to the greedy heuristic based on optimality conditions. There are several methods to improve the offline (tuning) phase: a recent work introduces a Deep Reinforcement Learning (DRL) algorithm in the tuning phase. Results show that DRL can be effectively adopted as a black-box optimization algorithm. From the RL side, the online heuristic can prevent the agent to choose infeasible actions. In this project, the candidate has to compare the method mentioned above with a state-of-the-art approach called \"Safety Layer\": if infeasible, the original action is replaced with the closest feasible one such that the Euclidean norm is minimized.",
+        "Responsible":["Allegra", "Mattia"]
+    }, {
+        "Subject":"Modular stochastic VPP aggregator with different flexibility bands",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["Virtual Power Plant", "Energy Management ", "VIRTUS Dataset"],
+        "Techniques":["Combinatorial Optimization"],
+        "Description":"A Virtual Power Plant (VPP) aggregates many Distributed Energy Resources  in a single operating profile. DER combines both reliable (deterministic) power systems with uncontrollable (stochastic) Renewable Energy Sources (RES). An Energy Management System generally allocates the power flows from the different sources minimizing the cost and satisfying the user demand. The goal is to characterize the flexibility that a VPP, with different production, loading and storage \"configurations\", can supply to the network. For example, consider VPP in the absence of storage, with different energy prices, in the absence of cogeneration, and in the presence \/ absence of flexibility on the loads and characterize the minimum and maximum flexibility on the network. These VPP configurations could be used as inputs for the VPP integration problem on the market. The project also includes the validation of the system in the context of the VIRTUS project.",
+        "Responsible":["Allegra"]
+    }, {
+        "Subject":"Anomaly detection with self-supervised learning",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["HPC"],
+        "Techniques":["ML"],
+        "Description":"In several real-world contexts labelled data is very scarce (e.g., in HPC). Recent semi-supervised approaches have been shown to address this issue effectively (see for instance here: https:\/\/ai.googleblog.com\/2021\/09\/discovering-anomalous-data-with-self.html)",
+        "Responsible":["Andrea"]
+    }, {
+        "Subject":"Transfer learning for anomaly detection in HPC",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["HPC"],
+        "Techniques":["ML"],
+        "Description":"Data center and HPC systems are composed by thousands of individual nodes, each of one can fail; failure detection and prediction is very important (downtime should be as low as possible). However, is there a need for a different ML model for each node? Can a model be transferred to other nodes? It should also be considered the issue that not all nodes might have the same data features. The experiments wil be done on a real HPC system, Marconi100, hosted at CINECA",
+        "Responsible":["Andrea"]
+    }, {
+        "Subject":"Creation of benchmarks for vertical matchmaking and related ML models",
+        "Project":false,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic"],
+        "Techniques":["ML", "Benchmarking"],
+        "Description":"Vertical matchmaking means finding the right HW architecture for a given (AI) algorithm; to do so, predictive models need to be incorporated into an optimization framework",
+        "Responsible":["Andrea", "Allegra"]
+    }, {
+        "Subject":"Vertical matchmaking optimization engine",
+        "Project":true,
+        "Thesis":true,
+        "Internship":false,
+        "Applications-Datasets":["Synthetic"],
+        "Techniques":["ML", "Optimization"],
+        "Description":"Vertical matchmaking means finding the right HW architecture for a given (AI) algorithm; to do so, predictive models need to be incorporated into an optimization framework. The optimization component need to interact tightly with the predictive models to find the optimal HW assignement, and it needs to also take into account of the uncertaintly of the ML models. Starting from an initial optimization engine, the activity wil consist in expanding it in several directions (some depending on the outcome of previous project\/thesis): 1) improve the uncertainty measure of the predictive models, 2) consider multiple HW resources, 3) consider a more wide selection of AI algorithm, 4) allow the handling of soft constraints (and others)",
+        "Responsible":["Andrea", "Allegra"]
+    }
+]

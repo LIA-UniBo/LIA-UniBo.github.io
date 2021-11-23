@@ -9,7 +9,7 @@
         "Description":"In principle the Empirical Model Learning approach can strongly benefit from the used of iterative schemes,where solutions are produced, evaluated, and then used to refine the surrogate model. Compare to standard black-box optimization, using EML would naturally provide support for constraints. However, this kind of approach requires to solve multiple challanges that are suited for several theses and projects, e.g.: making sure that the models used in EML (chiefly NNs and DTs) received significant updates from each solution, handling exploration\/exploitation trade-offs, evaluating confidence intervals... ",
         "Responsible":["Michele", "Andrea"]
     }, {
-        "Subject":"Robust Neural Networks (advanced)",
+        "Subject":"Robust Neural Networks",
         "Project":false,
         "Thesis":true,
         "Internship":false,
@@ -368,5 +368,14 @@
         "Techniques":["ML", "Optimization"],
         "Description":"Vertical matchmaking means finding the right HW architecture for a given (AI) algorithm; to do so, predictive models need to be incorporated into an optimization framework. The optimization component need to interact tightly with the predictive models to find the optimal HW assignement, and it needs to also take into account of the uncertaintly of the ML models. Starting from an initial optimization engine, the activity wil consist in expanding it in several directions (some depending on the outcome of previous project\/thesis): 1) improve the uncertainty measure of the predictive models, 2) consider multiple HW resources, 3) consider a more wide selection of AI algorithm, 4) allow the handling of soft constraints (and others)",
         "Responsible":["Andrea", "Allegra"]
+    }, {
+        "Subject":"Process mining on prescription data",
+        "Project":true,
+        "Thesis":false,
+        "Internship":false,
+        "Applications-Datasets":["Health"],
+        "Techniques":["ML"],
+        "Description":"Test process mining approach on anonymized data about medical prescriptions on the Bologna Metropolitan area. The goal is to define typical processes involving visits and medical procedures, which can be used either for logistic optimization or for devising a simulator",
+        "Responsible":["Michele", "Cristiano"]
     }
 ]

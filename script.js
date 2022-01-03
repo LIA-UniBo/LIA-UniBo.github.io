@@ -24,34 +24,64 @@ var type_filters = []
 // whether or not the project cards are expanded
 var expanded = false
 
+var id = "1VP65rJp_DxbNVjN_fIBjIU7rAgziJrno_FBAPz4JCHo"
+// the google sheets file id
 
-$(() => $.getJSON('./projects.json', json => {
-    // assigns the data constant (with capitalized tags)
-    data = json.map(project => {
-        project['Applications-Datasets'] = project['Applications-Datasets'].map(tag => capitalize(tag))
-        project['Techniques'] = project['Techniques'].map(tag => capitalize(tag))
-        project['Responsible'] = project['Responsible'].map(tag => capitalize(tag))
-        return project
-    })
+var gid = "471452889"
+// the google sheets worksheet id
 
-    // retrieves the tags by flattening the list of tags then it gets unique values by creating a temporary set
-    app_tags = [... new Set(json.flatMap(project => project['Applications-Datasets']))].sort()
-    tec_tags = [... new Set(json.flatMap(project => project['Techniques']))].sort()
+var format = "tsv"
+// the google sheets export format
 
-    // renders the page
-    $('#filters').html(filters(app_tags, tec_tags, type_tags))
-    $('#projects').html(projects(data))
-    filterProjects()
-}))
+$(() => {
+    $.ajax({
+        type: "GET",
+        url: "https://docs.google.com/spreadsheets/d/" + id + "/export?format=" + format + "&id=" + id + "&gid=" + gid,
+        dataType: "text",
+        success: text => {
+            // manually retrieves information from tsv file and assigns the "data" global variable
+            const lines = text.split('\r\n');
+            const columns = lines[0].split('\t');
+            data = lines.slice(1).map((line, index) => {
+                // we use tsv instead of csv due to commas being used to separate tags within columns
+                info = line.split('\t')
+                // checks that the info array matches the columns array
+                console.assert(info.length === columns.length, 'Project ' + index + ' is bad-shaped.')
+                // create output dictionary by matching columns and values
+                dictionary = {}
+                for (i = 0; i < columns.length; i++) {
+                    dictionary[columns[i]] = info[i]
+                }
+                return dictionary
+            })
+
+            console.log(data)
+
+            // processes the lists of tags (splits by comma, then capitalizes each tag)
+            data = data.map(project => {
+                project['Applications-Datasets'] = project['Applications-Datasets'].split(', ').map(capitalize)
+                project['Techniques'] = project['Techniques'].split(', ').map(capitalize)
+                project['Responsible'] = project['Responsible'].split(', ').map(capitalize)
+                return project
+            })
+
+            // retrieves the tags by flattening the list of tags then it gets unique values by creating a temporary set
+            app_tags = [... new Set(data.flatMap(project => project['Applications-Datasets']))].sort()
+            tec_tags = [... new Set(data.flatMap(project => project['Techniques']))].sort()
+
+            // renders the page
+            $('#filters').html(filters(app_tags, tec_tags, type_tags))
+            $('#projects').html(projects(data))
+            filterProjects()
+        }
+     })
+})
 
 // Show/hide the projects list depending on the filters
 function filterProjects() {
-    console.log('APP:\n' + app_filters + 'TEC:\n' + tec_filters)
-
     emptyList = data.map(project => {
         // data passes the filter if all the three conditions are satisfied
         // i.e., either there are no filters or at least one tag is included
-        console.log('Benchmarking' in project['Techniques'])
         const app_condition = app_filters.length == 0 || app_filters.some(tag => project['Applications-Datasets'].includes(tag))
         const tec_condition = tec_filters.length == 0 || tec_filters.some(tag => project['Techniques'].includes(tag))
         const type_condition = type_filters.length == 0 || type_filters.filter(tag => project[tag]).length > 0

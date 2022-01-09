@@ -1,7 +1,7 @@
 // Html Dynamic Templates for Projects and Filters
 
 function projects(data) {
-    return data.map((project, index) => `
+    return data.filter(project => project['Available'] == 'TRUE').map((project, index) => `
         <div class="accordion-item" id="project-${index}">
             <div class="accordion-header" id="heading-${index}">
                 <button onclick="toggle_project()" class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${index}" aria-expanded="false" aria-controls="collapse-${index}">
@@ -17,9 +17,9 @@ function projects(data) {
                             ${project['Techniques'].map(tag => '<span class="badge bg-light text-dark">' + tag + '</span>').join('\n')}
                         </div>
                         <div class="col-4 text-end">
-                            ${project['Project'] ? '<span class="badge bg-primary">Project</span>' : ''}
-                            ${project['Thesis'] ? '<span class="badge bg-primary">Thesis</span>' : ''}
-                            ${project['Internship'] ? '<span class="badge bg-primary">Internship</span>' : ''}
+                            ${project['Project'] == 'TRUE' ? '<span class="badge bg-primary">Project</span>' : ''}
+                            ${project['Thesis'] == 'TRUE' ? '<span class="badge bg-primary">Thesis</span>' : ''}
+                            ${project['Internship'] == 'TRUE' ? '<span class="badge bg-primary">Internship</span>' : ''}
                         </div>
                     </div>
                     <br>

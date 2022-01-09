@@ -55,8 +55,6 @@ $(() => {
                 return dictionary
             })
 
-            console.log(data)
-
             // processes the lists of tags (splits by comma, then capitalizes each tag)
             data = data.map(project => {
                 project['Applications-Datasets'] = project['Applications-Datasets'].split(', ').map(capitalize)

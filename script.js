@@ -55,11 +55,15 @@ $(() => {
                 return dictionary
             })
 
-            // processes the lists of tags (splits by comma, then capitalizes each tag)
-            data = data.map(project => {
+            // filters out unavailable projects
+            data = data.filter(project => project['Available'] == 'TRUE').map(project => {
+                // splits tags by comma and capitalizes them
                 project['Applications-Datasets'] = project['Applications-Datasets'].split(', ').map(capitalize)
                 project['Techniques'] = project['Techniques'].split(', ').map(capitalize)
-                project['Responsible'] = project['Responsible'].split(', ').map(capitalize)
+                // convert worktype tags to boolean values
+                project['Thesis'] = project['Thesis'] == 'TRUE'
+                project['Project'] = project['Project'] == 'TRUE'
+                project['Internship'] = project['Internship'] == 'TRUE'
                 return project
             })
 
@@ -113,10 +117,6 @@ function toggle_button() {
         $('#toggle').text('Collapse')
         expanded = true
     }
-}
-
-function toggle_project() {
-    
 }
 
 // Filtering functions: checks whether the checkbox has been activated or deactivated,
